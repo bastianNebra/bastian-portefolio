@@ -220,7 +220,7 @@ function App() {
                   Bastian Kemka Lontsi
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-600 font-semibold">
-                  Cloud & DevSecOps Experte
+                  Cloud & DevSecOps
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Masterstudent an der Hochschule Kaiserslautern mit Fokus auf Cloud-Sicherheit, 
