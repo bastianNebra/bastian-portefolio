@@ -2,35 +2,44 @@ name: Deploy Vite + React App
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ]  # Branche à surveiller pour déploiement
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      # 1️⃣ Récupère le code du repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Installe Node.js et active la mise en cache pnpm
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
 
+      # 3️⃣ Installe pnpm
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 9
 
+      # 4️⃣ Installe les dépendances
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # 5️⃣ Compile le projet
       - name: Build project
         run: pnpm build
 
+      # 6️⃣ Déploie sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          keep_files: false       # Supprime les anciens fichiers avant de publier
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
