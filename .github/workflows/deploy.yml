@@ -2,18 +2,18 @@ name: Deploy Vite + React App
 
 on:
   push:
-    branches: [ master ]  # Branche à surveiller pour déploiement
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Récupère le code du repo
+      # 1️⃣ Récupère le code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Installe Node.js et active la mise en cache pnpm
+      # 2️⃣ Installe Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -40,6 +40,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          keep_files: false       # Supprime les anciens fichiers avant de publier
+          keep_files: false
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
