@@ -2,7 +2,7 @@ name: Deploy Vite + React App
 
 on:
   push:
-    branches: [ master ]
+    branches: [ gh-pages ]
 
 jobs:
   build-and-deploy:
@@ -38,7 +38,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          
           keep_files: false
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
