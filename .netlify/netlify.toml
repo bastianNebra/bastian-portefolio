@@ -1,0 +1,28 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Mziba\\mziba_new_repo\\bastian.lontsi\\bastian.lontsi\\frontend\\build"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "C:\\Mziba\\mziba_new_repo\\bastian.lontsi\\bastian.lontsi\\frontend"
+command = "yarn run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
