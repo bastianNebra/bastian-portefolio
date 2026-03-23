@@ -27,7 +27,8 @@ import {
   BookOpen,
   ArrowRight,
   Sparkles,
-  MessageSquare
+  MessageSquare,
+  Flame
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
@@ -35,7 +36,7 @@ import { Badge } from '../components/ui/badge';
 import { Separator } from '../components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Avatar, AvatarFallback } from '../components/ui/avatar';
-import { personalInfo, experience, skills, projects, featuredPost, education, testimonials, aiSection, aiWorkshop } from '../data/mock';
+import { personalInfo, experience, skills, projects, featuredPost, education, testimonials, aiSection, aiWorkshop, latestNews } from '../data/mock';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -57,6 +58,9 @@ const Home = () => {
               BL
             </div>
             <div className="hidden md:flex items-center gap-8">
+              <button onClick={() => scrollToSection('news')} className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
+                Aktuelles
+              </button>
               <button onClick={() => scrollToSection('about')} className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
                 Über mich
               </button>
@@ -134,6 +138,68 @@ const Home = () => {
                 GitHub
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
+      <section id="news" className="py-20 px-6 bg-gradient-to-br from-orange-950/20 to-red-950/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <Flame className="w-8 h-8 text-orange-400" />
+              <h2 className="text-4xl font-bold">Aktuelles</h2>
+            </div>
+            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+          </div>
+          
+          <div className="space-y-6">
+            {latestNews.map((news) => (
+              <Card key={news.id} className="bg-zinc-900/80 border-zinc-800 hover:border-orange-700/50 transition-all hover:shadow-lg hover:shadow-orange-500/10">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <span className="text-3xl">{news.emoji}</span>
+                      <div>
+                        <CardTitle className="text-2xl text-orange-400">{news.title}</CardTitle>
+                        <div className="flex items-center gap-3 mt-2">
+                          <Badge className="bg-orange-950 text-orange-400 border-orange-900">
+                            <Calendar className="w-3 h-3 mr-1" />
+                            {news.date}
+                          </Badge>
+                          <Badge variant="outline" className="border-green-700 text-green-400">
+                            {news.status}
+                          </Badge>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zinc-300 leading-relaxed mb-6">{news.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {news.technologies.map((tech, idx) => (
+                      <Badge key={idx} className="bg-zinc-800 text-zinc-300 border-zinc-700">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  {news.link && (
+                    <div className="flex items-center gap-2 text-sm text-zinc-400">
+                      <ExternalLink className="w-4 h-4" />
+                      <a href={news.link} target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">
+                        {news.link}
+                      </a>
+                      {news.isPrivate && (
+                        <Badge variant="outline" className="border-zinc-600 text-zinc-500 text-xs">
+                          Privat
+                        </Badge>
+                      )}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

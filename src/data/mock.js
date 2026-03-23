@@ -417,3 +417,18 @@ export const aiWorkshop = {
   audience: ["Entwickler aller Erfahrungsstufen", "Tech Leads", "Engineering Manager"],
   prerequisites: ["Grundlegende Programmierkenntnisse", "Interesse an Produktivitätssteigerung"]
 };
+
+// Latest News Section
+export const latestNews = [
+  {
+    id: 1,
+    title: "Mziba-synchro",
+    date: "März 2026",
+    emoji: "🚀",
+    description: "Aktuell arbeite ich an Mziba-synchro, einem bidirektionalen Synchronisierungsdienst zwischen Firebase und PostgreSQL. Entwickelt mit Spring Boot 3 und Java 17, ermöglicht mir dieses Projekt, spannende Herausforderungen zu meistern: die Gewährleistung der Datenkonsistenz in Echtzeit durch eine ereignisgesteuerte Architektur basierend auf Listeners. Jede Änderung in einer Datenbank löst sofort ihre Replikation in der anderen aus — eine echte technische Herausforderung, die mich dazu bringt, Patterns für verteilte Synchronisation neu zu denken.",
+    technologies: ["Spring Boot 3", "Java 17", "Firebase", "PostgreSQL", "Event-Driven Architecture"],
+    status: "In Entwicklung",
+    link: "https://gitlab.com/mziba1/mziba-synchro",
+    isPrivate: true
+  }
+];
