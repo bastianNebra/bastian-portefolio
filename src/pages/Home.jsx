@@ -23,6 +23,7 @@ import {
   Bot,
   Lightbulb,
   Users,
+  Globe,
   Terminal,
   BookOpen,
   ArrowRight,
@@ -36,7 +37,7 @@ import { Badge } from '../components/ui/badge';
 import { Separator } from '../components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Avatar, AvatarFallback } from '../components/ui/avatar';
-import { personalInfo, experience, skills, projects, featuredPost, education, testimonials, aiSection, aiWorkshop, latestNews } from '../data/mock';
+import { personalInfo, experience, skills, projects, featuredPost, education, testimonials, internationalExperience, aiSection, aiWorkshop, latestNews } from '../data/mock';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -241,6 +242,22 @@ const Home = () => {
                   <span className="text-sm">Software Architecture</span>
                 </div>
               </div>
+
+              <div className="mt-6 p-4 rounded-lg border border-zinc-700 bg-zinc-900">
+                <h3 className="text-sm font-semibold text-cyan-300 mb-2">Online Referenzen</h3>
+                <ul className="space-y-2 text-sm text-zinc-300">
+                  <li>
+                    <a href="https://www.iuscm.net" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+                      Institut Universitaire Siantou (IUS) - offizielle Website
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.google.com/search?q=Kemka+Lontsi+Bastian+MINESUP" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+                      MINESUP Google-Search (Kemka Lontsi Bastian)
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             
             <div className="space-y-6">
@@ -270,6 +287,25 @@ const Home = () => {
                   <p className="text-zinc-400">
                     HashiCorp Vault, Kubernetes, Microservices-Architektur, Cloud-Native Development
                   </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-zinc-900 border-zinc-800">
+                <CardHeader>
+                  <CardTitle className="text-xl flex items-center gap-2">
+                    <Globe className="w-5 h-5 text-green-400" />
+                    Internationale Erfahrung
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {internationalExperience.map((exp, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-zinc-400">
+                        <CheckCircle2 className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                        <span className="text-sm">{exp}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             </div>
@@ -798,13 +834,27 @@ const Home = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-zinc-400 mb-4">{edu.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {edu.skills.map((skill, idx) => (
                       <Badge key={idx} variant="secondary" className="bg-zinc-800 text-zinc-300">
                         {skill}
                       </Badge>
                     ))}
                   </div>
+                  {edu.references && edu.references.length > 0 && (
+                    <div className="text-sm text-zinc-400">
+                      <p className="mb-2 font-medium text-zinc-300">Online Referenzen:</p>
+                      <ul className="space-y-1">
+                        {edu.references.map((ref, i) => (
+                          <li key={i}>
+                            <a href={ref} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
+                              {ref}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

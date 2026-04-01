@@ -87,7 +87,9 @@ export const skills = {
     { name: "Spring Framework", level: "Fortgeschritten" },
     { name: "Node.js", level: "Fortgeschritten" },
     { name: "PHP", level: "Mittel" },
-    { name: "Python", level: "Mittel" },
+    { name: "Python", level: "Fortgeschritten" },
+    { name: "Go", level: "Mittel" },
+    { name: "TypeScript", level: "Fortgeschritten" },
     { name: "RESTful APIs", level: "Fortgeschritten" }
   ],
   frontend: [
@@ -103,7 +105,11 @@ export const skills = {
     { name: "Kubernetes", level: "Mittel" },
     { name: "HashiCorp Vault", level: "Mittel" },
     { name: "CI/CD", level: "Fortgeschritten" },
-    { name: "AWS", level: "Mittel" },
+    { name: "AWS (EC2, S3, RDS, Lambda, IAM)", level: "Fortgeschritten" },
+    { name: "Pulumi", level: "Fortgeschritten" },
+    { name: "GitHub Actions", level: "Fortgeschritten" },
+    { name: "AWS CloudWatch", level: "Fortgeschritten" },
+    { name: "Databricks", level: "Mittel" },
     { name: "GitLab", level: "Fortgeschritten" }
   ],
   tools: [
@@ -228,6 +234,20 @@ export const featuredPost = {
 
 export const education = [
   {
+    id: 3,
+    institution: "Institut Universitaire Siantou (IUS)",
+    degree: "BTS Software Engineering",
+    field: "Software Engineering",
+    period: "2017 - 2019",
+    description: "Softwareentwicklung und Softwareengineering in einem praxisorientierten Umfeld mit Fokus auf die Entwicklung von Softwarelösungen für reale Probleme.",
+    skills: ["Grundlagen Informatik", "Programmierung", "Technische Konzepte", "Softwareentwicklung"],
+      references: [
+      "https://www.google.com/search?q=DQP+Technische+Informatik+Cameroon",
+      "https://www.google.com/search?q=Kemka+Lontsi+Bastian+MINESUP"
+    ]
+  }
+  ,
+  {
     id: 1,
     institution: "Hochschule Kaiserslautern",
     degree: "Bachelor of Applied Science",
@@ -244,6 +264,16 @@ export const education = [
     period: "2025 - 2026",
     description: "Vertiefung in moderne Software-Entwicklung, DevOps und Cloud-Technologien",
     skills: ["Cloud-native Architekturen", "DevOps-Praktiken", "HashiCorp Vault", "Kubernetes", "CI/CD", "Software-Architektur", "Sicherheitsmanagement"]
+  },
+  {
+    id: 4,
+    institution: "Youth Training Center Cameroon",
+    degree: "DQP (Diplôme de Qualification Professionnelle)",
+    field: "Technische Informatik",
+    period: "2016 - 2017",
+    description: "Diplôme de Qualification Professionnelle in Technische Informatik mit Schwerpunkt auf Linux Administration(Debian 9).",
+    skills: ["Linux Administration", "Debian 9", "Systemadministration", "Netzwerkgrundlagen"],
+
   }
 ];
 
@@ -264,6 +294,14 @@ export const testimonials = [
     text: "Die Zusammenarbeit mit Bastian war hervorragend. Seine Full Stack Kenntnisse und sein Verständnis für moderne Architekturen haben unser Projekt erheblich vorangebracht.",
     avatar: "SS"
   }
+];
+
+export const internationalExperience = [
+  "Internationale Zusammenarbeit mit Teams in Deutschland, Frankreich und den USA",
+  "Remote-Arbeit in globalen Projekten mit verteilten Stakeholdern",
+  "Mehrsprachige Kommunikation (Deutsch, Englisch, Französisch)",
+  "Erfahrung mit kulturellen Unterschieden in agilen Entwicklungsprozessen",
+  "Teilnahme an internationalen Tech-Konferenzen und Workshops"
 ];
 
 // AI & Programming Section
