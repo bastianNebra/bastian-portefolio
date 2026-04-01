@@ -48,6 +48,15 @@ const Home = () => {
     }
   };
 
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/cv/BASTIAN-KEMKA_CV.pdf';
+    link.download = 'Bastian_Lontsi_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       {/* Navigation */}
@@ -125,7 +134,7 @@ const Home = () => {
                 Kontakt aufnehmen
                 <ChevronRight className="ml-2 w-4 h-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-zinc-700 hover:bg-zinc-900">
+              <Button size="lg" variant="outline" className="border-zinc-700 hover:bg-zinc-900" onClick={downloadCV}>
                 <Download className="mr-2 w-4 h-4" />
                 Lebenslauf herunterladen
               </Button>
@@ -845,7 +854,7 @@ const Home = () => {
               <Mail className="mr-2 w-4 h-4" />
               Email senden
             </Button>
-            <Button size="lg" variant="outline" className="border-zinc-700 hover:bg-zinc-900">
+            <Button size="lg" variant="outline" className="border-zinc-700 hover:bg-zinc-900" onClick={downloadCV}>
               <Download className="mr-2 w-4 h-4" />
               Lebenslauf herunterladen
             </Button>

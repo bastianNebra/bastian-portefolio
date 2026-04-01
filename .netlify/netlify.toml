@@ -7,10 +7,9 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "C:\\Mziba\\mziba_new_repo\\bastian.lontsi\\bastian.lontsi\\frontend\\build"
+publish = "/Users/bastianlontsi/bastian-portefolio/build"
 publishOrigin = "ui"
 commandOrigin = "ui"
-base = "C:\\Mziba\\mziba_new_repo\\bastian.lontsi\\bastian.lontsi\\frontend"
 command = "yarn run build"
 
 [build.environment]
