@@ -14,17 +14,12 @@ const skills = [
   {
     title: "Cloud & Infrastruktur",
     description: "Cloud-native Umgebungen von der Architektur bis zum stabilen Betrieb.",
-    items: ["Microsoft Azure", "AWS", "Terraform", "Linux", "Windows Server"],
-  },
-  {
-    title: "DevOps & CI/CD",
-    description: "Automatisierte, reproduzierbare Delivery-Prozesse mit Security by Design.",
-    items: ["GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Ansible"],
+    items: ["Microsoft Azure", "AWS","Google Cloud", "Linux", "Windows Server"],
   },
   {
     title: "Build & Deployment",
     description: "Aufbau und Pflege von CI/CD-Pipelines. Entwicklung automatisierter Deployments.",
-    items: ["Maven, Jenkins", "Nexus, Artifactory", "Git, Bitbucket", "GitLab, GitHub"],
+    items: ["Nexus, Artifactory", "Git, Bitbucket", "GitLab, GitHub", "Jenkins, GitLab CI", "Azure DevOps"],
   },
   {
     title: "Monitoring",
@@ -39,22 +34,22 @@ const skills = [
   {
     title: "GitOps",
     description: "Deklarative und versionierte Bereitstellung von Anwendungen und Infrastruktur. Automatisierte Synchronisierung und kontinuierliche Auslieferung in Kubernetes-Umgebungen.",
-    items: ["Argo CD", "Flux CD", "Helm", "Kustomize", "Kubernetes", "GitLab, GitHub"],
+    items: ["Argo CD", "Flux CD", "Kustomize", "GitLab CI", "GitHub Actions"],
   },
   {
     title: "Infrastructure as Code",
     description: "Versionierte, reproduzierbare und automatisierte Bereitstellung von Cloud-Infrastruktur und Systemkonfigurationen.",
-    items: ["Terraform", "Ansible", "OpenTofu", "Pulumi", "Azure Bicep", "AWS CloudFormation"],
+    items: ["Terraform", "Ansible", "OpenTofu", "Pulumi", "Azure Bicep","AWS CloudFormation"],
   },
   {
-    title: "DevSecOps",
+    title: "Security & Compliance",
     description: "Sichere Plattformen, Secrets und nachvollziehbare Zugriffsprozesse.",
-    items: ["HashiCorp Vault", "IAM", "Secret Management", "Hardening", "Monitoring"],
+    items: ["HashiCorp Vault", "IAM", "Hardening"],
   },
   {
     title: "Software Engineering",
     description: "Ganzheitliches Verständnis vom Produktcode bis zur Infrastruktur.",
-    items: ["Java", "Go", "Python", "TypeScript", "REST APIs"],
+    items: ["Java","php", "Go", "Python", "TypeScript", "REST APIs"],
   },
   {
     title: "Frontend & Mobile",
