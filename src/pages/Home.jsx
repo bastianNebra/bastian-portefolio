@@ -22,6 +22,31 @@ const skills = [
     items: ["GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Ansible"],
   },
   {
+    title: "Build & Deployment",
+    description: "Aufbau und Pflege von CI/CD-Pipelines. Entwicklung automatisierter Deployments.",
+    items: ["Maven, Jenkins", "Nexus, Artifactory", "Git, Bitbucket", "GitLab, GitHub"],
+  },
+  {
+    title: "Monitoring",
+    description: "Aufbau und Pflege moderner Monitoring- und Observability-Lösungen.",
+    items: ["Prometheus", "Grafana", "Loki", "Kibana", "Portainer", "Tempo"],
+  },
+  {
+    title: "Containerisierung",
+    description: "Auslieferung, Entwicklung und Betrieb von Containern mit Docker und Kubernetes. Build-Pipelines auf Basis von Containern.",
+    items: ["Docker, Kubernetes", "Swarm, Helm"],
+  },
+  {
+    title: "GitOps",
+    description: "Deklarative und versionierte Bereitstellung von Anwendungen und Infrastruktur. Automatisierte Synchronisierung und kontinuierliche Auslieferung in Kubernetes-Umgebungen.",
+    items: ["Argo CD", "Flux CD", "Helm", "Kustomize", "Kubernetes", "GitLab, GitHub"],
+  },
+  {
+    title: "Infrastructure as Code",
+    description: "Versionierte, reproduzierbare und automatisierte Bereitstellung von Cloud-Infrastruktur und Systemkonfigurationen.",
+    items: ["Terraform", "Ansible", "OpenTofu", "Pulumi", "Azure Bicep", "AWS CloudFormation"],
+  },
+  {
     title: "DevSecOps",
     description: "Sichere Plattformen, Secrets und nachvollziehbare Zugriffsprozesse.",
     items: ["HashiCorp Vault", "IAM", "Secret Management", "Hardening", "Monitoring"],
